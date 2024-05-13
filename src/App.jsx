@@ -113,7 +113,7 @@ export default function App() {
 
     <main>
       {tenzies ?
-        <Confetti width={window.innerWidth} height={window.innerHeight} />
+        <Confetti />
         : null}
       {tenzies ? <h1>You Won Tenzies!</h1> : <h1>Tenzies</h1>}
       <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
