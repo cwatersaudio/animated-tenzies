@@ -108,11 +108,16 @@ export default function App() {
     setDice(allNewDice)
   }
 
+  const { width, height } = React.useWindowSize()
 
   return (
 
     <main>
-      {tenzies ? <Confetti /> : null}
+      {tenzies ?
+        <Confetti
+          width={width}
+          height={height} />
+        : null}
       {tenzies ? <h1>You Won Tenzies!</h1> : <h1>Tenzies</h1>}
       <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <div id="diceArea">
